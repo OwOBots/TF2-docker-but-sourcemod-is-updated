@@ -28,10 +28,17 @@ fi
 cd "${STEAMAPPDIR}"
 
 SERVER_SECURITY_FLAG="";
+#steam networking for home networks
+STEAM_NETWORKING="";
 
 if [ "$SRCDS_SECURED" -eq 0 ]; then
         SERVER_SECURITY_FLAG="-insecure";
 fi
+
+if [ "$FAKEIP" -eq 0]; then
+	STEAM_NETWORKING="-enablefakeip"
+ fi
+
 
 bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
                         -steam_dir "${STEAMCMDDIR}" \
@@ -52,4 +59,5 @@ bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
                         -authkey "${SRCDS_WORKSHOP_AUTHKEY}" \
                         +servercfgfile "${SRCDS_CFG}" \
                         +mapcyclefile "${SRCDS_MAPCYCLE}" \
-                        ${SERVER_SECURITY_FLAG}
+                        ${SERVER_SECURITY_FLAG} \
+			${STEAM_NETWORKING}
