@@ -35,7 +35,7 @@ if [ "$SRCDS_SECURED" -eq 0 ]; then
         SERVER_SECURITY_FLAG="-insecure";
 fi
 
-if [ "$FAKEIP" -eq 0]; then
+if [ "$SRCDS_FAKEIP" -eq 0]; then
 	STEAM_NETWORKING="-enablefakeip"
  fi
 
