@@ -15,4 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag owotf2:$(date +%s)
+    #x32 for sourcemod
+      run: docker build . --file bookworm/x32/Dockerfile --tag owotf2:$(date +%s)
