@@ -18,7 +18,7 @@ RUN set -x \
 	# Install, update & upgrade packages
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends --no-install-suggests \
-		wget=1.21.3-1+b2 \
+		wget \
 		ca-certificates=20230311 \
 		lib32z1=1:1.2.13.dfsg-1 \
 		libncurses5:i386=6.4-4 \
