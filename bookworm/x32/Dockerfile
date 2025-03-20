@@ -76,8 +76,8 @@ EXPOSE 27015/tcp \
 
 FROM bookworm-base AS bookworm-metamod
 
-ENV METAMOD_VERSION 1.11
+ENV METAMOD_VERSION 1.12
 
 FROM bookworm-metamod AS bookworm-sourcemod
 
-ENV SOURCEMOD_VERSION 1.11
+ENV SOURCEMOD_VERSION 1.12
